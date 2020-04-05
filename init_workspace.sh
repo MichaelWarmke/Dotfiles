@@ -12,4 +12,10 @@ apt install python3
 
 export PATH="~/go:$PATH"
 
+## create symlinks
 
+ln -s .bashrc ~/.bashrc
+ln -s .vimrc ~/.vimrc
+ln -s .tmux.config ~/.tmux.config
+ln -s .git.config ~/.git.config
+ln -s .ssh/config ~/.ssh/config
