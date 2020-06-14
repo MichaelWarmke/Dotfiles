@@ -1,11 +1,14 @@
 #!/bin/bash
 
-apt-get update
+sudo apt-get update
 
 ## apt programs install
+apt install vim
+apt install neovim
 apt install tmux
+apt install xrdp
 apt install curl
-apt install gloang-go
+apt install golang-go
 apt install python3
 apt install openjdk-11-jdk
 apt install leiningen
@@ -33,4 +36,3 @@ ln -s .bashrc ~/.bashrc
 ln -s .vimrc ~/.vimrc
 ln -s .tmux.config ~/.tmux.config
 ln -s .git.config ~/.git.config
-ln -s .ssh/config ~/.ssh/config
