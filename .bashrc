@@ -98,8 +98,12 @@ alias gc='git commit'
 alias lll='ll'
 alias e='exit'
 alias cdot='cd ~/Dotfiles'
+alias cws='cd /home/mike/wsl_workspace'
 
-# Add an "alert" alias for long running commands.  Use like so:
+export WSL_ip_line=$(ipconfig.exe | grep "WSL" -n | awk -F ":" '{print $1+4}')
+export DISPLAY=$(ipconfig.exe | awk -v a=$WSL_ip_line '{if (NR==a) print $NF":0.0"}' | tr -d "\r")
+
+ #Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
